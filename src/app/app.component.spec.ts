@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'webRepsol' title`, () => {
+  it(`should have the 'webAlk-def' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('webRepsol');
+    expect(app.title).toEqual('webAlk-def');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, webRepsol');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, webAlk-def');
   });
 });

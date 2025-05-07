@@ -1,4 +1,4 @@
-ng new repsol
+ng new alk-def
 
 //install bootstrap
 npm install bootstrap --save
