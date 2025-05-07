@@ -1,0 +1,81 @@
+ng new repsol
+
+//install bootstrap
+npm install bootstrap --save
+npm install jquery --save
+npm install popper.js --save
+
+
+angular.json
+
+      "styles": [
+        "node_modules/bootstrap/dist/css/bootstrap.min.css",
+        "src/styles.css"
+      ],
+      "scripts": [
+          "node_modules/jquery/dist/jquery.min.js",
+          "node_modules/bootstrap/dist/js/bootstrap.min.js"
+      ]
+
+
+//icons
+npm i bootstrap-icons
+
+styles.css file:
+
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+
+
+
+//AOS
+
+npm i aos --save
+npm i --save-dev @types/aos
+
+angular.json
+
+            "styles": [
+              "src/styles.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/aos/dist/aos.css"
+            ],
+            "scripts": [
+              "node_modules/jquery/dist/jquery.min.js",
+              "node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/aos/dist/aos.js"
+            ]
+
+
+
+//correr el proyecto
+ng s -o
+
+
+
+//crear componentes
+ng g c pages/home --skipTests -is
+ng g c pages/gracias --skipTests -is
+ng g c pages/participa --skipTests -is
+
+ng g c shared/header --skipTests -is
+ng g c shared/footer --skipTests -is
+
+
+
+crear componente de legales
+
+
+//servicios
+
+ng g s services/login --skipTests
+ng g s services/registro --skip-tests
+ng g s services/participa --skip-tests
+
+
+ng g guard services/auth --skip-tests
+
+
+
+
+
+

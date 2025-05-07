@@ -1,0 +1,385 @@
+/*FONTS*/
+
+@font-face {
+    font-family: 'repsol';
+    src: url('../fonts/Repsol-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'repsolbold';
+    src: url('../fonts/Repsol-Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'repsol' !important;
+    font-weight: 400;
+    color: #757575 !important;
+}
+
+
+/*navbar*/
+
+.header_nav {
+    background: #fff;
+    background: -webkit-linear-gradient(top, #fff 1%, #e9e8e8 100%);
+    background: linear-gradient(to bottom, #fff 1%, #e9e8e8 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#e9e8e8', GradientType=0);
+}
+
+.logoR {
+    max-width: 222px;
+}
+
+.separador {
+    padding: 0 13px 0 20px;
+    color: #cdc7bf;
+    font-size: 28px;
+    vertical-align: middle;
+}
+
+.mex {
+    color: #00859b;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.iconFA {
+    font-size: 15px;
+    color: #fe8200;
+}
+
+.backNaranja {
+    background-color: #fe8200;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, .5) !important;
+}
+
+.navbar-light .navbar-toggler {
+    background: azure;
+}
+
+
+/*HOME*/
+
+.header__barraTipo.country {
+    background: #00859b;
+    height: 8px;
+    display: block;
+}
+
+.banner {
+    background-image: url(../img/backAzul.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 400px;
+}
+
+.centro {
+    text-align: center;
+}
+
+
+/*MECANICA*/
+
+h1 {
+    padding-top: 4%;
+    font-family: 'repsolbold';
+    color: #757575;
+}
+
+.meca {
+    width: 100%;
+    max-width: 200px;
+    margin-top: 20px;
+}
+
+.naranja {
+    color: #fe8200;
+}
+
+
+/*REGISTRO*/
+
+.log {
+    background-color: #f0f0f0;
+}
+
+.card-header {
+    background-color: #fe8200 !important;
+}
+
+.btn.focus,
+.btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgb(254 130 0);
+}
+
+.btnG {
+    display: inline-block !important;
+    margin-bottom: 0;
+    font-weight: 400 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    touch-action: manipulation;
+    cursor: pointer !important;
+    background-image: none;
+    white-space: nowrap;
+    border-radius: 4px !important;
+    user-select: none !important;
+    transition: all .15s ease !important;
+    line-height: 16px !important;
+    font-size: 1em !important;
+    padding: 0.75em 2em !important;
+    background-color: #00809A !important;
+    border: 1px #00809A solid !important;
+    color: #fff !important;
+}
+
+.btnG:hover {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400 !important;
+    text-align: center !important;
+    vertical-align: middle !important;
+    touch-action: manipulation;
+    cursor: pointer !important;
+    background-image: none;
+    white-space: nowrap;
+    border-radius: 4px !important;
+    user-select: none;
+    transition: all .15s ease !important;
+    line-height: 16px !important;
+    font-size: 1em !important;
+    padding: 0.75em 2em !important;
+    background-color: transparent !important;
+    border: 1px #00809A solid !important;
+    color: #00809A !important;
+}
+
+.iconoRegistro {
+    display: inline-block;
+    font-weight: 400;
+    color: #212529;
+    text-align: center;
+    text-decoration: none;
+    vertical-align: middle;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    border-radius: 0.25rem;
+}
+
+.text-turquesa500 {
+    color: #00809A !important;
+}
+
+.siz {
+    font-size: 30px !important;
+}
+
+
+/*PREMIOS*/
+
+.premios {
+    background-color: #FFC800;
+}
+
+.rig {
+    text-align: right !important;
+}
+
+.text {
+    padding-top: 100px;
+}
+
+.h3 {
+    background-color: #00859b;
+    color: #fff;
+    padding: 5px;
+}
+
+
+/*GANADORES*/
+
+h2 {
+    color: #fe8200;
+}
+
+
+/*FOOTER*/
+
+footer {
+    color: #464646;
+    background-color: #ddd;
+    padding: 50px;
+}
+
+.nav-legal {
+    color: #464646;
+    padding: 0 15px;
+}
+
+.nav-legal:hover {
+    color: #00809A;
+    padding: 0 15px;
+}
+
+.icon-nav {
+    color: #464646;
+    padding: 0 15px;
+    font-size: 1.5rem;
+}
+
+.icon-nav:hover {
+    color: #00809A;
+    padding: 0 15px;
+    font-size: 1.5rem;
+}
+
+
+/*LEGALES*/
+
+.legal {
+    background-color: #cecccc;
+}
+
+.scroll {
+    height: 300px;
+    width: 200px;
+    border: 1px solid #ddd;
+    background: #f1f1f1;
+    overflow-y: scroll;
+}
+
+
+/*MODAL*/
+
+.mb {
+    background-color: #cecccc;
+    color: rgb(27, 27, 27);
+}
+
+.icon-modal {
+    font-size: 5rem;
+    color: #00859b;
+}
+
+
+/*FOTO*/
+
+.foto {
+    width: 100% !important;
+}
+
+.text2 {
+    padding-top: 0px;
+}
+
+
+/*GRACIAS*/
+
+.iconG {
+    font-size: 3rem;
+    color: #fe8200;
+}
+
+.input-container {
+    width: 100%;
+}
+
+.input-container input {
+    width: 100%;
+    height: 45px;
+    margin: 5px;
+}
+
+.cont-flex {
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 991px) {
+    .input-container input {
+        width: 100%;
+        height: 40px;
+        margin: 5px;
+    }
+    .cont-flex {
+        width: 100%;
+        height: 405px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 760px) {
+    .cont-flex {
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.btn-repsol {
+    background-color: #fe8200;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+
+#time {
+    font-size: 25px;
+    color: #fe8200;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.cont-legales {
+    width: 95%;
+    background-color: white;
+    font-size: 12px !important;
+}
+
+.background-white {
+    background-color: white !important;
+}
+
+.header-fixed {
+    width: 100%;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+}
+
+.banner {
+    margin-top: 162px;
+}
+
+.space-height {
+    margin-top: 162px;
+}
+
+@media only screen and (max-width: 800px) {
+    .banner {
+        margin-top: 100px;
+    }
+}
+
+.winner h2 {
+    margin: 0;
+}
+
+.winner p {
+    font-size: 18px;
+}
