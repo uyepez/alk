@@ -12,6 +12,13 @@ import { environment } from '../../../environments/environment';
   styles: ``
 })
 export class HeaderComponent {
+  //nuevo alk
+  menuItems =[
+    {name: 'Promociones', color: 'green', route:'/promociones'},
+    {name: 'Participa', color: 'purple', route:'/participa'},
+    {name: 'Premios', color: 'purple', route:'/premios'},
+    {name: 'Ganadores', color: 'purple', route:'/ganadores'},
+  ];
 
   miToken: string =  "";
 
