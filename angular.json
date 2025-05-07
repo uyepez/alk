@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "webAlk-def": {
+    "webRepsol": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/webAlk-def",
+            "outputPath": "dist/webRepsol",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -74,10 +74,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "webAlk:build:production"
+              "buildTarget": "webRepsol:build:production"
             },
             "development": {
-              "buildTarget": "webALK:build:development"
+              "buildTarget": "webRepsol:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -11,5 +11,5 @@ import { FooterComponent } from './shared/footer/footer.component';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'webAlk-def';
+  title = 'webRepsol';
 }
