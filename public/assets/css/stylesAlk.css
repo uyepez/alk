@@ -118,6 +118,122 @@ body {
 
 }
 
+/*heard 2*/
+
+.header {
+    /* Estilos generales del header */
+    background-color: #f0f0f0;
+    padding: 1rem 0;
+  
+    .container {
+      /* Estilos del contenedor */
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+  
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+  
+        .logo {
+            max-width: 222px;
+          /* Estilos del logo */
+        }
+  
+        .main-menu {
+          /* Estilos del menú principal para pantallas grandes */
+          display: flex;
+          align-items: center;
+  
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+  
+            li {
+              margin-left: 20px;
+  
+              a {
+                text-decoration: none;
+                color: #333;
+                /* Otros estilos de los enlaces */
+              }
+            }
+          }
+        }
+  
+        .hamburger-menu {
+          display: none; /* Ocultar por defecto en pantallas grandes */
+          flex-direction: column;
+          justify-content: space-around;
+          width: 30px;
+          height: 21px;
+          background: transparent;
+          border: none;
+          cursor: pointer;
+          padding: 0;
+  
+          .bar {
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+  
+  /* Estilos para pantallas más pequeñas (ejemplo: 768px hacia abajo) */
+  @media (max-width: 768px) {
+    .header .container .header-content {
+      .main-menu {
+        display: none; /* Ocultar el menú principal por defecto en pantallas pequeñas */
+        position: absolute;
+        top: 100%; /* Colocarlo debajo del header */
+        left: 0;
+        background-color: #f0f0f0;
+        width: 100%;
+        z-index: 10; /* Asegurar que esté por encima de otros elementos */
+        padding: 1rem;
+  
+        &.open {
+          display: block; /* Mostrar el menú cuando la clase 'open' está presente */
+        }
+  
+        ul {
+          flex-direction: column;
+          align-items: flex-start;
+  
+          li {
+            margin: 10px 0;
+            margin-left: 0;
+          }
+        }
+      }
+  
+      .hamburger-menu {
+        display: flex; /* Mostrar el icono de hamburguesa en pantallas pequeñas */
+      }
+    }
+  }
+  
+  /* Animación del icono de hamburguesa al abrir/cerrar */
+  .header .container .header-content .hamburger-menu.open .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .header .container .header-content .hamburger-menu.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .header .container .header-content .hamburger-menu.open .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
 
 /*HOME*/
 

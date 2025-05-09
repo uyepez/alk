@@ -19,6 +19,11 @@ export class HeaderComponent {
     {name: 'Premios', color: 'purple', route:'/premios'},
     {name: 'Ganadores', color: 'purple', route:'/ganadores'},
   ];
+  isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   miToken: string =  "";
 

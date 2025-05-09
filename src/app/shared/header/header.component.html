@@ -1,69 +1,81 @@
-<!--<div class="header-fixed">
+<!--
+
+<div class="header-fixed">
   <a name="uno" id="uno"></a>
   <header class="header_nav">
     <nav class="navbar navbar-expand-lg navbar-light container navP">
-      <a class="navbar-brand" [routerLink]="['/home']"><img class="logoR" src="assets/img/alk-def-logo.svg"
-          alt="Logo_alk_def"> <span class="separador">/</span> <span class="mex">MÉXICO</span></a>
-      <div class="collapse navbar-collapse" id="navbarText">
-        <ul class="navbar-nav ms-auto">
-        </ul>
-        <span class="navbar-text">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link text-dark"
-                href="https://www.repsol.com/es/index.cshtml?_ga=2.20622076.518943408.1655952261-2043797742.1655952261"
-                target="_blank"><i class="fa-solid fa-earth-africa iconFA"></i>&nbsp; Global</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-dark" href="https://www.repsol.com.mx/es/contactanos/index.cshtml"
-                target="_blank"><i class="fa-solid fa-message iconFA"></i>&nbsp; Contáctanos</a>
-            </li>
-          </ul>
-        </span>
-      </div>
+      <a class="navbar-brand" [routerLink]="['/home']">
+        <img class="logo"  src="/assets/img/alk-def-logo.svg" alt="Logo_alk_def">
+          </a>
+          <nav class="navbar navbar-expand-lg navbar-light container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+              aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+              <div class="navbar-nav">
+                <a class="nav-link text-white" [routerLink]="['/home']" fragment="uno" data-ancla="uno">INICIO</a>
+                <a class="nav-link text-white" [routerLink]="['/home']" fragment="dos" data-ancla="dos">MECÁNICA</a>
+                <a class="nav-link text-white" [routerLink]="['/home']" fragment="tres" data-ancla="tres">REGISTRO</a>
+                <a class="nav-link text-white" [routerLink]="['/home']" fragment="cuatro" data-ancla="cuatro">PREMIOS</a>
+                <a class="nav-link text-white" [routerLink]="['/home']" fragment="cinco" data-ancla="cinco">GANADORES</a>
+                <a *ngIf="miToken !='' " class="nav-link text-white" [routerLink]="['/participa']"
+                  data-ancla="cinco">PARTICIPA</a>
+                <a *ngIf="miToken !='' " class="nav-link text-white" href="javaScript:void(0)" (click)="salir()"
+                  data-ancla="cinco">SALIR</a>
+              </div>
+            </div>
+          </nav>
     </nav>
     <div class="header__barraTipo country"></div>
   </header>
-  <section class="backNaranja">
-    <nav class="navbar navbar-expand-lg navbar-light container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
-        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-        <div class="navbar-nav">
-          <a class="nav-link text-white" [routerLink]="['/home']" fragment="uno" data-ancla="uno">INICIO</a>
-          <a class="nav-link text-white" [routerLink]="['/home']" fragment="dos" data-ancla="dos">MECÁNICA</a>
-          <a class="nav-link text-white" [routerLink]="['/home']" fragment="tres" data-ancla="tres">REGISTRO</a>
-          <a class="nav-link text-white" [routerLink]="['/home']" fragment="cuatro" data-ancla="cuatro">PREMIOS</a>
-          <a class="nav-link text-white" [routerLink]="['/home']" fragment="cinco" data-ancla="cinco">GANADORES</a>
-          <a *ngIf="miToken !='' " class="nav-link text-white" [routerLink]="['/participa']"
-            data-ancla="cinco">PARTICIPA</a>
-          <a *ngIf="miToken !='' " class="nav-link text-white" href="javaScript:void(0)" (click)="salir()"
-            data-ancla="cinco">SALIR</a>
-
-        </div>
-      </div>
-    </nav>
-  </section>
 </div>-->
-
+<!--
 <header class="header">
   <div class="container">
-      <div class="header-content">
-          <div class="logo">
-              <a href="/">
-                  <img src="/assets/img/alk-def-logo.svg" alt="Logo" />
-              </a>
-          </div>
-          
-          <nav class="main-menu">
-              <ul>
-                  <li *ngFor="let item of menuItems">
-                      <a [routerLink]="item.route" [ngClass]="item.color">{{item.name}}</a>
-                  </li>
-              </ul>
-          </nav>
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/img/alk-def-logo.svg" alt="Logo" />
+        </a>
       </div>
+      <nav class="main-menu">
+        <ul>
+          <li *ngFor="let item of menuItems">
+            <a [routerLink]="item.route" [ngClass]="item.color">{{item.name}}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </div>
-</header>
+</header>---->
+<!--header-->
+
+<!--2 -->
+<header class="header">
+  <div class="container">
+    <div class="header-content">
+      <div class="logo">
+        <a href="/">
+          <img src="/assets/img/alk-def-logo.svg" alt="Logo" />
+        </a>
+      </div>
+
+      <button class="hamburger-menu" (click)="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </button>
+
+      <nav class="main-menu" [ngClass]="{ open: isMenuOpen }">
+        <ul>
+          <li *ngFor="let item of menuItems">
+            <a [routerLink]="item.route" [ngClass]="item.color">{{
+              item.name
+            }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</header>-
