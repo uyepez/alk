@@ -24,7 +24,10 @@ import { RegistroService, registroUser } from '../../services/registro.service';
 
 export class HomeComponent {
 
-// MEVCANICA JAZ
+  //Ganadores
+  // Lista de ganadores (ejemplo)
+
+// MECANICA JAZ
 steps = [
     {
       letter: 'A',
@@ -45,6 +48,8 @@ steps = [
       text: 'Participa obten una bocina inteligente.'
     }
   ];
+
+  
 
 
 
