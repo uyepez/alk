@@ -8,10 +8,12 @@
       </div>
     </div>
   </div>
-</section>
+  </section>
+
 
 <!--MECANICA-->
 <a name="dos" id="dos"></a>
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-12 centro">
@@ -36,7 +38,28 @@
     </div>
   </div>
   <br><br>
-</div>
+</div>-->
+<!--MECANICA JAZ-->
+
+<section class="mecanica-section">
+  <!--<app-drops-effect [count]="25" [color]="'rgba(100, 100, 100, 0.15)'"></app-drops-effect>-->
+  
+  <div class="container">
+    <h2 class="section-title">Mecánica</h2>
+    
+    <div class="steps-container">
+      <div class="step" *ngFor="let step of steps">
+        <div class="step-circle" [ngClass]="step.color">
+          <span>{{ step.letter }}</span>
+        </div>
+        <div class="step-image">
+          <img [src]="step.image" [alt]="'Paso ' + step.letter">
+        </div>
+        <p class="step-text" [ngClass]="step.color">{{ step.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!--REGISTRO-->
 <a name="tres" id="tres"></a>
