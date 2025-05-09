@@ -1,6 +1,6 @@
 @media (max-width: 1200px) {
     .banner{
-        background-image: url(../img/backAzul.jpg);
+        background-image: url(../img/hero-bg.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -9,7 +9,7 @@
   }
   @media (max-width: 992px) {
     .banner{
-        background-image: url(../img/backAzul.jpg);
+        background-image: url(../img/hero-bg.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -37,7 +37,7 @@
   }
   @media (max-width: 650px) {
     .banner{
-        background-image: url(../img/backAzul.jpg);
+        background-image: url(../img/hero-bg.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
