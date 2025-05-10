@@ -44,6 +44,9 @@
         padding-top: 20px;
     }
   }
+
+
+
   @media (max-width: 650px) {
     .banner{
         background-image: url(../img/hero-bg.jpg);
