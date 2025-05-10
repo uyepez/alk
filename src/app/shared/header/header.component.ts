@@ -12,7 +12,7 @@ import { environment } from '../../../environments/environment';
   styles: ``
 })
 export class HeaderComponent {
-  //nuevo alk
+  //Menu alk
   menuItems =[
     {name: 'Promociones', color: 'green', route:'/promociones'},
     {name: 'Participa', color: 'purple', route:'/participa'},
