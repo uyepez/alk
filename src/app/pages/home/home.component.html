@@ -61,7 +61,18 @@
     <h2 class="section-title">MECÁNICA</h2>
     
     <div class="steps-container">
-      <div class="step" *ngFor="let step of steps">
+      <div class="step" *ngFor="let step of step1">
+        <div class="step-circle" [ngClass]="step.color">
+          <span>{{ step.letter }}</span>
+        </div>
+        <div class="step-image">
+          <img [src]="step.image" [alt]="'Paso ' + step.letter">
+        </div>
+        <p class="step-text" [ngClass]="step.color">{{ step.text }}</p>
+      </div>
+    </div>
+    <div class="steps-container">
+      <div class="step" *ngFor="let step of step2">
         <div class="step-circle" [ngClass]="step.color">
           <span>{{ step.letter }}</span>
         </div>
@@ -72,37 +83,6 @@
       </div>
     </div>
   </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col align-self-center">
-      One of three columns
-    </div> 
-  </div>
-  <div class="row">
-    <div class="col align-self-start">
-      One of three columns
-    </div>
-      <div class="col align-self-end">
-      One of three columns
-    </div>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <div class="col align-self-start">
-      One of three columns
-    </div>
-    <div class="col align-self-center">
-      One of three columns
-    </div>
-    <div class="col align-self-end">
-      One of three columns
-    </div>
-  </div>
-</div>
-
 </section>
 
 <!--REGISTRO-->
@@ -287,7 +267,7 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-ms-12 rig">
-        <img src="assets/img/regalo.png " alt="Premio">
+        <img src="assets/img/premio.png " alt="Premio">
       </div>
       <div class="col-md-6 col-ms-12 text">
         <h3><span class="h3">Tres ganadores de</span><br><br><span class="h3">$500.00 pesos cada

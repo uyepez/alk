@@ -28,13 +28,18 @@ export class HomeComponent {
   // Lista de ganadores (ejemplo)
 
 // MECANICA JAZ
-steps = [
+step1 = [
     {
       letter: 'A',
       color: 'blue',
       image: '/assets/img/registro-datos.png',
       text: 'Registra tus datos.'
-    },
+    }
+  ];
+
+ 
+
+step2 = [
     {
       letter: 'B',
       color: 'purple',
@@ -49,7 +54,6 @@ steps = [
     }
   ];
 
-  
 
 
 
