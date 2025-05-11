@@ -24,10 +24,7 @@ import { RegistroService, registroUser } from '../../services/registro.service';
 
 export class HomeComponent {
 
-  //Ganadores
-  // Lista de ganadores (ejemplo)
-
-// MECANICA JAZ
+// steps
 step1 = [
     {
       letter: 'A',
@@ -36,8 +33,6 @@ step1 = [
       text: 'Registra tus datos.'
     }
   ];
-
- 
 
 step2 = [
     {
@@ -53,9 +48,6 @@ step2 = [
       text: 'Participa obten una bocina inteligente.'
     }
   ];
-
-
-
 
   // login
   loginForm: FormGroup;

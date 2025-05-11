@@ -33,7 +33,7 @@ body {
 
 
 .backNaranja {
-  background-color: #fe8200;
+  background-color: #ebe6e1;
 }
 
 .navbar-light .navbar-nav .nav-link:hover {
@@ -313,10 +313,23 @@ body {
   overflow: hidden;
   background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
   /* Fondo azul oscuro para simular agua */
-  height: 100vh;
+  /*min-height: 90vh;*/
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: auto;
+}
+
+.hero-sec-bg {
+ background-image: url('/public/assets/img/hero-bg-v4.png'); /* Reemplaza con tu ruta */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%; /* Ejemplo de altura mínima */
+  
+
 }
 
 .bubble-container {
@@ -364,12 +377,12 @@ body {
   margin: 0 auto;
   position: relative;
   z-index: 1;
-  text-align: center;
+  text-align: left;
 }
 
 .centered-image {
   .promo-image {
-    max-width: 80%;
+    max-width: 100%;
     height: auto;
     filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.2));
     animation: float 6s ease-in-out infinite;
@@ -397,9 +410,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  /*background: url('/assets/img/hero-bg-v4.png') repeat;*/
+ width: 100%;
+height: 100%;
+  background: url('/public/assets/img/hero-bg-v4.png') repeat;
   /* Usa una imagen o CSS para gotas */
   opacity: 0.2;
 
@@ -513,7 +526,7 @@ h1 {
       .step-image {
         margin-bottom: 15px;
         img {
-          max-width: 100%;
+          max-width:280px;
           height: auto;
         }
       }
@@ -546,7 +559,7 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  /*background: url('/public/assets/img/mec-bg.png') repeat;*/ /* Usa una imagen o CSS para gotas */
+  background: url('/public/assets/img/mec-bg.png') repeat; /* Usa una imagen o CSS para gotas */
   opacity: 0.5;
 }
 img { z-index: 1; }
@@ -628,8 +641,8 @@ img { z-index: 1; }
 
 .iconoRegistro {
   display: inline-block;
-  font-weight: 400;
-  color: #212529;
+  font-weight: 700;
+  color:#8e44ad;
   text-align: center;
   text-decoration: none;
   vertical-align: middle;
@@ -705,7 +718,7 @@ img {
 
 
 h2 {
-  color: #fe8200;
+  color: #8e44ad;;
 }
 
 /*Ganadores Jaz*/
@@ -813,7 +826,7 @@ h2 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: url('/images/mec-bg.png') repeat;
+  /*background: url('/images/mec-bg.png') repeat;*/
   /* Usa una imagen o CSS para gotas */
   opacity: 0.2;
 }
