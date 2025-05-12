@@ -1,16 +1,5 @@
 <app-header></app-header>
 
-<!--HOME-->
-<!--
-<section class="banner">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 center">
-      </div>
-    </div>
-  </div>
-  </section>-->
-
   <!--HOME JAZ-->
 <section class="hero">
 
@@ -25,34 +14,6 @@
 
 <!--MECANICA-->
 <a name="dos" id="dos"></a>
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 centro">
-      <h1>Mecánica</h1>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-4 col-sm-12 centro">
-      <img class="meca" src="assets/img/registro.png" alt="Registro">
-      <p><span class="naranja">1. Registra </span>tus datos completos.</p>
-    </div>
-
-
-    <div class="col-md-4 col-sm-12 centro">
-      <img class="meca" src="assets/img/foto3.png" alt="Foto">
-      <p><span class="naranja">2. Juega </span>encontrando las diferencias entre las dos imágenes.</p>
-    </div>
-    <div class="col-md-4 col-sm-12 centro">
-      <img class="meca" src="assets/img/ganaste.png" alt="Gana">
-      <p><span class="naranja">3. ¡Gana $500.00! </span>Si al final de los periodos de participación fuiste uno de los
-        tres más rápidos en resolver el juego.</p>
-    </div>
-  </div>
-  <br><br>
-</div>-->
-<!--MECANICA JAZ-->
-
 <section class="mecanica-section">
   <!--<app-drops-effect [count]="25" [color]="'rgba(100, 100, 100, 0.15)'"></app-drops-effect>-->
   
@@ -85,7 +46,6 @@
 </section>
 
 <!--REGISTRO-->
-
 <a name="tres" id="tres"></a>
 
 <section class="participacion-section">
@@ -94,7 +54,6 @@
     <div class="row">
       <div class="col-sm-12 centro">
         <h1 class="section-title">PARTICIPA</h1>
-
       </div>
 
       <!--Registro-->
@@ -104,15 +63,15 @@
             <div class="card-header" id="headingOne">
               <h2 class="mb-0">
                 <span class="iconoRegistro text-left" type="text">
-                  REGISTRO
+                REGISTRO
                 </span>
               </h2>
             </div>
             <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
               <div class="card-body">
                 <form [formGroup]="registroForm" (ngSubmit)="registrousr()">
-                  <div class="row g-3">
-                  <div class="col-md-6">
+                  <div class="row g-3 ">
+                    <div class="col-md-6">
                     <label for="nombre">Nombre:</label>
                     <input type="text" class="form-control" required="" name="nombreregistro"
                       formControlName="nombreregistro"
@@ -153,7 +112,7 @@
                       Se requiere un email valido.
                     </span>
                   </div>
-                  <div class="col-md-6">
+                  <div class="form-group col-md-12">
                     <label for="exampleFormControlSelect1">Estado</label>
                     <select required class="form-control" name="estadoregistro" formControlName="estadoregistro"
                       [class.is-invalid]="registroForm.get('estadoregistro')?.invalid && registroForm.get('estadoregistro')?.touched "
@@ -198,7 +157,9 @@
                       Este campo es requerido.
                     </span>
                   </div>
-                  <div class="form-group pt-2 form-check col-md-12">
+                  <div class="col-md-12">
+                    <div class="d-flex justify-content-end align-items-center">
+                  <div class="form-group pt-2 form-check">
                     <input type="checkbox" class="form-check-input" required id="terminos" name="terminos" value="OK"
                       required name="terminos" formControlName="terminos"
                       [class.is-invalid]="registroForm.get('terminos')?.invalid && registroForm.get('terminos')?.touched "
@@ -211,17 +172,18 @@
                         Este campo es requerido.
                       </span></label>
                   </div>
-                  <button type="submit" class="btn btn-primary btnG"
-                    [disabled]="registroForm.invalid">RegistrarmeParticipar</button>
-                    </div>
-                </form>
+                  <button type="submit" class="btn btn-primary btnG ms-2"
+                    [disabled]="registroForm.invalid">Registrarme</button>
+                  </div>
+                 </div>
+                </div>
+               </form>
               </div>
             </div>
           </div>
         </div>
       </div>
       <div></div>
-      <br>
       <br>
       <!--Login-->
       <div class="col-sm-12">
@@ -230,7 +192,7 @@
             <div class="card-header" id="headingTwo">
               <h2 class="mb-0">
                 <span class="iconoRegistro text-left" type="text">
-                  Login
+                  LOGIN
                 </span>
               </h2>
             </div>

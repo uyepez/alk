@@ -591,11 +591,11 @@ img { z-index: 1; }
   background-color: #ffffff !important;
 }
 
-.btn.focus,
+/*.btn.focus,
 .btn:focus {
   outline: 0;
   box-shadow: 0 0 0 0.2rem rgb(254 130 0);
-}
+}*/
 
 .btnG {
   display: inline-block !important;
@@ -652,6 +652,9 @@ img { z-index: 1; }
   font-size: 1rem;
   border-radius: 0.25rem;
 }
+
+.form-control-color {
+  border: var(--bs-border-width) solid #0dcaf0;}
 
 .text-turquesa500 {
   color: #00809A !important;
