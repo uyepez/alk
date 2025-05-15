@@ -864,6 +864,56 @@ img {
 
 
 /*FOOTER*/
+
+footer {
+    background-color: #f8f9fa; /* Un gris claro de fondo */
+    color: #555;
+    padding-top: 20px;
+    padding-bottom: 0; /* El padding inferior se maneja en las secciones internas */
+}
+
+.footer-content {
+    padding: 1rem 0;
+    .logo {
+      img {
+        height: 80px;
+      }
+    }
+}
+
+.nav-legal2 {
+    color: #555;
+    text-decoration: none;
+    margin-right: 1rem;
+}
+
+.nav-legal2:hover {
+    color: #007bff; /* Un color primario al pasar el mouse */
+}
+
+.icon-nav {
+    font-size: 1.5rem;
+    color: #777;
+    margin-left: 0.5rem;
+}
+
+.icon-nav:hover {
+    color: #007bff;
+}
+
+.footer-bottom-content {
+    color: #777;
+}
+
+
+/* anterior
+footer .cont-flex {
+  width: 100;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .footer-content {
     display: flex;
     justify-content: space-between;
@@ -906,7 +956,7 @@ footer {
   padding: 0 15px;
   font-size: 1.5rem;
 }
-
+*/
 
 /*LEGALES*/
 
