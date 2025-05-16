@@ -975,6 +975,19 @@ footer {
   font-size: 1.5rem;
 }
 
+.btn-alk {
+    width: 100%;
+    height: 45px;
+    background-color: #00859b;
+    color: white;
+    font-family: bold;
+    font-size: 25px;
+    border: none;
+}
+
+.btn-alk:hover {
+    background-color: rgb(80, 5, 129);
+}
 
 
 
@@ -1080,7 +1093,7 @@ footer {
 
 .iconG {
   font-size: 3rem;
-  color: #fe8200;
+  color: #9800feee;
 }
 
 .input-container {
@@ -1125,7 +1138,7 @@ footer {
 }
 
 .btn-repsol {
-  background-color: #fe8200;
+  background-color: #00e0fecc;
   color: white;
   font-weight: bold;
   border: none;
