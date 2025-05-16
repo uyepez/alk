@@ -9,7 +9,7 @@ import { AvisoComponent } from '../../legales/aviso/aviso.component';
 @Component({
   selector: 'app-footer',
   standalone: true,
-  imports: [RouterLink,BasesComponent,AvisoComponent],
+  imports: [BasesComponent,AvisoComponent],
   templateUrl: './footer.component.html',
   styles: ``
 })
