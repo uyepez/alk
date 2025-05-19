@@ -1,32 +1,33 @@
 <app-header></app-header>
 
-  <!--HOME-->
+<!--HOME-->
 <section class="hero">
-
-    <div class="container">
-      <div class="centered-image">
-        <img src="assets/img/hero-image.png" alt="Promoción" class="promo-image">
-      </div>
+  <div class="container">
+    <div class="centered-image">
+      <img
+        src="assets/img/hero-image.png"
+        alt="Promoción"
+        class="promo-image"
+      />
     </div>
-  
-  </section>
-
+  </div>
+</section>
 
 <!--MECANICA-->
 <a name="dos" id="dos"></a>
 <section class="mecanica-section">
   <!--<app-drops-effect [count]="25" [color]="'rgba(100, 100, 100, 0.15)'"></app-drops-effect>-->
-  
+
   <div class="container">
     <h2 class="section-title">MECÁNICA</h2>
-    
+
     <div class="steps-container">
       <div class="step" *ngFor="let step of step1">
         <div class="step-circle" [ngClass]="step.color">
           <span>{{ step.letter }}</span>
         </div>
         <div class="step-image">
-          <img [src]="step.image" [alt]="'Paso ' + step.letter">
+          <img [src]="step.image" [alt]="'Paso ' + step.letter" />
         </div>
         <p class="step-text" [ngClass]="step.color">{{ step.text }}</p>
       </div>
@@ -37,7 +38,7 @@
           <span>{{ step.letter }}</span>
         </div>
         <div class="step-image">
-          <img [src]="step.image" [alt]="'Paso ' + step.letter">
+          <img [src]="step.image" [alt]="'Paso ' + step.letter" />
         </div>
         <p class="step-text" [ngClass]="step.color">{{ step.text }}</p>
       </div>
@@ -49,180 +50,344 @@
 <a name="tres" id="tres"></a>
 
 <section class="participacion-section">
-<div class="log">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12 centro">
-        <h1 class="section-title">PARTICIPA</h1>
-      </div>
+  <div class="log">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 centro">
+          <h1 class="section-title">PARTICIPA</h1>
+        </div>
 
-      <!--Registro-->
-      <div class="col-sm-12">
-        <div class="card" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingOne">
-              <h2 class="mb-0">
-                <span class="iconoRegistro text-left" type="text">
-                REGISTRO
-                </span>
-              </h2>
-            </div>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-              <div class="card-body">
-                <form [formGroup]="registroForm" (ngSubmit)="registrousr()">
-                  <div class="row g-3 ">
-                    <div class="col-md-6">
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" class="form-control" required="" name="nombreregistro"
-                      formControlName="nombreregistro"
-                      [class.is-invalid]="registroForm.get('nombreregistro')?.invalid && registroForm.get('nombreregistro')?.touched "
-                      [class.is-valid]="registroForm.get('nombreregistro')?.valid && registroForm.get('nombreregistro')?.touched">
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('nombreregistro')?.invalid ">
-                      Este campo es requerido y solo se aceptan letras mínimo de caracteres (3).
-                    </span>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="nombre">Apellidos:</label>
-                    <input type="text" class="form-control" required="" name="apellidoregistro"
-                      formControlName="apellidoregistro"
-                      [class.is-invalid]="registroForm.get('apellidoregistro')?.invalid && registroForm.get('apellidoregistro')?.touched "
-                      [class.is-valid]="registroForm.get('apellidoregistro')?.valid && registroForm.get('apellidoregistro')?.touched">
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('apellidoregistro')?.invalid ">
-                      Este campo es requerido y solo se aceptan letras mínimo de caracteres (3).
-                    </span>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="tel">Teléfono:</label>
-                    <input type="tel" class="form-control" maxlength="10" required name="telefonoregistro"
-                      formControlName="telefonoregistro"
-                      [class.is-invalid]="registroForm.get('telefonoregistro')?.invalid && registroForm.get('telefonoregistro')?.touched "
-                      [class.is-valid]="registroForm.get('telefonoregistro')?.valid && registroForm.get('telefonoregistro')?.touched">
-                    <small id="tel" class="form-text text-muted">Ingresa 10 dígitos.</small><br>
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('telefonoregistro')?.invalid ">
-                      Este campo es requerido y permíte hasta 10 dígitos.
-                    </span>
-                  </div>
-                  <div class="col-md-6">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" class="form-control" required name="emailregistro"
-                      formControlName="emailregistro"
-                      [class.is-invalid]="registroForm.get('emailregistro')?.invalid && registroForm.get('emailregistro')?.touched "
-                      [class.is-valid]="registroForm.get('emailregistro')?.valid && registroForm.get('emailregistro')?.touched">
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('emailregistro')?.invalid ">
-                      Se requiere un email valido.
-                    </span>
-                  </div>
-                  <div class="form-group col-md-12">
-                    <label for="exampleFormControlSelect1">Estado</label>
-                    <select required class="form-control" name="estadoregistro" formControlName="estadoregistro"
-                      [class.is-invalid]="registroForm.get('estadoregistro')?.invalid && registroForm.get('estadoregistro')?.touched "
-                      [class.is-valid]="registroForm.get('estadoregistro')?.valid && registroForm.get('estadoregistro')?.touched"
-                      (change)="validaEstado()">
-
-                      <option value="">Selecciona una opción</option>
-                      <option value="Aguascalientes">Aguascalientes</option>
-                      <option value="Baja California">Baja California</option>
-                      <option value="Baja California Sur">Baja California Sur</option>
-                      <option value="Campeche">Campeche</option>
-                      <option value="Coahuila de Zaragoza">Coahuila de Zaragoza</option>
-                      <option value="Colima">Colima</option>
-                      <option value="Chiapas">Chiapas</option>
-                      <option value="Chihuahua">Chihuahua</option>
-                      <option value="Ciudad de México">Ciudad de México</option>
-                      <option value="Durango">Durango</option>
-                      <option value="Guanajuato">Guanajuato</option>
-                      <option value="Guerrero">Guerrero</option>
-                      <option value="Hidalgo">Hidalgo</option>
-                      <option value="Jalisco">Jalisco</option>
-                      <option value="México">México</option>
-                      <option value="Michoacán de Ocampo">Michoacán de Ocampo</option>
-                      <option value="Morelos">Morelos</option>
-                      <option value="Nayarit">Nayarit</option>
-                      <option value="Nuevo León">Nuevo León</option>
-                      <option value="Oaxaca">Oaxaca</option>
-                      <option value="Puebla">Puebla</option>
-                      <option value="Querétaro">Querétaro</option>
-                      <option value="Quintana Roo">Quintana Roo</option>
-                      <option value="San Luis Potosí">San Luis Potosí</option>
-                      <option value="Sinaloa">Sinaloa</option>
-                      <option value="Sonora">Sonora</option>
-                      <option value="Tabasco">Tabasco</option>
-                      <option value="Tamaulipas">Tamaulipas</option>
-                      <option value="Tlaxcala">Tlaxcala</option>
-                      <option value="Veracruz">Veracruz</option>
-                      <option value="Yucatán">Yucatán</option>
-                      <option value="Zacatecas">Zacatecas</option>
-                    </select>
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('estadoregistro')?.invalid ">
-                      Este campo es requerido.
-                    </span>
-                  </div>
-                  <div class="col-md-12">
-                <div class="d-flex justify-content-end align-items-center">
-                  <div class="form-group pt-2 form-check">
-                    <input type="checkbox" class="form-check-input" required id="terminos" name="terminos" value="OK"
-                      required name="terminos" formControlName="terminos"
-                      [class.is-invalid]="registroForm.get('terminos')?.invalid && registroForm.get('terminos')?.touched "
-                      [class.is-valid]="registroForm.get('terminos')?.valid && registroForm.get('terminos')?.touched">
-                    <label class="form-check-label" for="exampleCheck1">Acepto <a class="text-turquesa500"
-                        target="_blank" routerLink="/legales">Bases</a>
-                      y <a class="text-turquesa500" target="_blank" routerLink="/legales">Aviso de
-                        Privacidad</a><br><span class="text-danger"
-                        *ngIf="isSubmitReg && registroForm.get('terminos')?.invalid ">
-                        Este campo es requerido.
-                      </span></label>
-                  </div>
-                  <button type="submit" class="btn btn-primary btnG ms-2"
-                    [disabled]="registroForm.invalid">Participar</button>
-                  </div>
+        <!--Registro-->
+        <div class="col-sm-12">
+          <div class="card" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h2 class="mb-0">
+                  <span class="iconoRegistro text-left" type="text">
+                    REGISTRO
+                  </span>
+                </h2>
+              </div>
+              <div
+                id="collapseOne"
+                class="collapse show"
+                aria-labelledby="headingOne"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  <form [formGroup]="registroForm" (ngSubmit)="registrousr()">
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <label for="nombre">Nombre:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required=""
+                          name="nombreregistro"
+                          formControlName="nombreregistro"
+                          [class.is-invalid]="
+                            registroForm.get('nombreregistro')?.invalid &&
+                            registroForm.get('nombreregistro')?.touched
+                          "
+                          [class.is-valid]="
+                            registroForm.get('nombreregistro')?.valid &&
+                            registroForm.get('nombreregistro')?.touched
+                          "
+                        />
+                        <span
+                          class="text-danger"
+                          *ngIf="
+                            isSubmitReg &&
+                            registroForm.get('nombreregistro')?.invalid
+                          "
+                        >
+                          Este campo es requerido y solo se aceptan letras
+                          mínimo de caracteres (3).
+                        </span>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="nombre">Apellidos:</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          required=""
+                          name="apellidoregistro"
+                          formControlName="apellidoregistro"
+                          [class.is-invalid]="
+                            registroForm.get('apellidoregistro')?.invalid &&
+                            registroForm.get('apellidoregistro')?.touched"
+                          [class.is-valid]="
+                            registroForm.get('apellidoregistro')?.valid &&
+                            registroForm.get('apellidoregistro')?.touched"
+                        />
+                        <span
+                          class="text-danger"
+                          *ngIf="
+                            isSubmitReg &&
+                            registroForm.get('apellidoregistro')?.invalid
+                          "
+                        >
+                          Este campo es requerido y solo se aceptan letras
+                          mínimo de caracteres (3).
+                        </span>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="tel">Teléfono:</label>
+                        <input
+                          type="tel"
+                          class="form-control"
+                          maxlength="10"
+                          required
+                          name="telefonoregistro"
+                          formControlName="telefonoregistro"
+                          [class.is-invalid]="
+                            registroForm.get('telefonoregistro')?.invalid &&
+                            registroForm.get('telefonoregistro')?.touched
+                          "
+                          [class.is-valid]="
+                            registroForm.get('telefonoregistro')?.valid &&
+                            registroForm.get('telefonoregistro')?.touched
+                          "
+                        />
+                        <small id="tel" class="form-text text-muted"
+                          >Ingresa 10 dígitos.</small
+                        ><br />
+                        <span
+                          class="text-danger"
+                          *ngIf="
+                            isSubmitReg &&
+                            registroForm.get('telefonoregistro')?.invalid
+                          "
+                        >
+                          Este campo es requerido y permíte hasta 10 dígitos.
+                        </span>
+                      </div>
+                      <div class="col-md-6">
+                        <label for="email">Correo electrónico:</label>
+                        <input
+                          type="email"
+                          class="form-control"
+                          required
+                          name="emailregistro"
+                          formControlName="emailregistro"
+                          [class.is-invalid]="
+                            registroForm.get('emailregistro')?.invalid &&
+                            registroForm.get('emailregistro')?.touched
+                          "
+                          [class.is-valid]="
+                            registroForm.get('emailregistro')?.valid &&
+                            registroForm.get('emailregistro')?.touched
+                          "
+                        />
+                        <span
+                          class="text-danger"
+                          *ngIf="
+                            isSubmitReg &&
+                            registroForm.get('emailregistro')?.invalid
+                          "
+                        >
+                          Se requiere un email valido.
+                        </span>
+                      </div>
+                      <div class="form-group col-md-12">
+                        <label for="exampleFormControlSelect1">Estado</label>
+                        <select
+                          required
+                          class="form-control"
+                          name="estadoregistro"
+                          formControlName="estadoregistro"
+                          [class.is-invalid]="
+                            registroForm.get('estadoregistro')?.invalid &&
+                            registroForm.get('estadoregistro')?.touched
+                          "
+                          [class.is-valid]="
+                            registroForm.get('estadoregistro')?.valid &&
+                            registroForm.get('estadoregistro')?.touched
+                          "
+                          (change)="validaEstado()"
+                        >
+                          <option value="">Selecciona una opción</option>
+                          <option value="Aguascalientes">Aguascalientes</option>
+                          <option value="Baja California">
+                            Baja California
+                          </option>
+                          <option value="Baja California Sur">
+                            Baja California Sur
+                          </option>
+                          <option value="Campeche">Campeche</option>
+                          <option value="Coahuila de Zaragoza">
+                            Coahuila de Zaragoza
+                          </option>
+                          <option value="Colima">Colima</option>
+                          <option value="Chiapas">Chiapas</option>
+                          <option value="Chihuahua">Chihuahua</option>
+                          <option value="Ciudad de México">
+                            Ciudad de México
+                          </option>
+                          <option value="Durango">Durango</option>
+                          <option value="Guanajuato">Guanajuato</option>
+                          <option value="Guerrero">Guerrero</option>
+                          <option value="Hidalgo">Hidalgo</option>
+                          <option value="Jalisco">Jalisco</option>
+                          <option value="México">México</option>
+                          <option value="Michoacán de Ocampo">
+                            Michoacán de Ocampo
+                          </option>
+                          <option value="Morelos">Morelos</option>
+                          <option value="Nayarit">Nayarit</option>
+                          <option value="Nuevo León">Nuevo León</option>
+                          <option value="Oaxaca">Oaxaca</option>
+                          <option value="Puebla">Puebla</option>
+                          <option value="Querétaro">Querétaro</option>
+                          <option value="Quintana Roo">Quintana Roo</option>
+                          <option value="San Luis Potosí">San Luis Potosí</option>
+                          <option value="Sinaloa">Sinaloa</option>
+                          <option value="Sonora">Sonora</option>
+                          <option value="Tabasco">Tabasco</option>
+                          <option value="Tamaulipas">Tamaulipas</option>
+                          <option value="Tlaxcala">Tlaxcala</option>
+                          <option value="Veracruz">Veracruz</option>
+                          <option value="Yucatán">Yucatán</option>
+                          <option value="Zacatecas">Zacatecas</option>
+                        </select>
+                        <span
+                          class="text-danger"
+                          *ngIf="
+                            isSubmitReg &&
+                            registroForm.get('estadoregistro')?.invalid
+                          "
+                        >
+                          Este campo es requerido.
+                        </span>
+                      </div>
+                      <div class="col-md-12">
+                        <div
+                          class="d-flex justify-content-end align-items-center"
+                        >
+                          <div class="form-group pt-2 form-check">
+                            <input
+                              type="checkbox"
+                              class="form-check-input"
+                              required
+                              id="terminos"
+                              name="terminos"
+                              value="OK"
+                              required
+                              name="terminos"
+                              formControlName="terminos"
+                              [class.is-invalid]="
+                                registroForm.get('terminos')?.invalid &&
+                                registroForm.get('terminos')?.touched
+                              "
+                              [class.is-valid]="
+                                registroForm.get('terminos')?.valid &&
+                                registroForm.get('terminos')?.touched
+                              "
+                            />
+                            <label class="form-check-label" for="exampleCheck1"
+                              >Acepto
+                              <a
+                                class="text-turquesa500"
+                                target="_blank"
+                                routerLink="/legales"
+                                >Bases</a
+                              >
+                              y
+                              <a
+                                class="text-turquesa500"
+                                target="_blank"
+                                routerLink="/legales"
+                                >Aviso de Privacidad</a
+                              ><br /><span
+                                class="text-danger"
+                                *ngIf="
+                                  isSubmitReg &&
+                                  registroForm.get('terminos')?.invalid
+                                "
+                              >
+                                Este campo es requerido.
+                              </span></label
+                            >
+                          </div>
+                          <button
+                            type="submit"
+                            class="btn btn-primary btnG ms-2"
+                            [disabled]="registroForm.invalid"
+                          >
+                            Participar
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
                 </div>
-                </div>
-              </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
-      <div></div>
-      <br>
-      <!--Login-->
-      <div class="col-sm-12">
-        <div class="" id="accordionExample">
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h2 class="mb-0">
-                <span class="iconoRegistro text-left" type="text">
-                  LOGIN
-                </span>
-              </h2>
-            </div>
-            <div id="collapseTwo" class="collapse show" aria-labelledby="headingTwo" data-parent="#accordionExample">
-              <div class="card-body">
-                <form [formGroup]="loginForm" (ngSubmit)="loginusr()">
-                  <div class="form-group pt-2">
-                    <label for="email">Correo electrónico:</label>
-                    <input type="email" class="form-control" id="emaillogin" formControlName="emaillogin" required
-                      [class.is-invalid]="loginForm.get('emaillogin')?.invalid && loginForm.get('emaillogin')?.touched"
-                      [class.is-valid]="loginForm.get('emaillogin')?.valid && loginForm.get('emaillogin')?.touched">
-                  </div>
-                  <div>
-                    <span class="text-danger" *ngIf="isSubmitLogin && loginForm.get('emaillogin')?.invalid">No es un
-                      email
-                      valido.</span>
-                  </div>
-                  <br>
-                  <!--<button type="submit" class="btn btn-primary btnG" [disabled]="loginForm.invalid">Entrar</button>-->
-                  <button type="submit" class="btn btn-primary btnG " >Participar</button>
-                </form>
+        <div></div>
+        <br />
+        <!--Login-->
+        <div class="col-sm-12">
+          <div class="" id="accordionExample">
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h2 class="mb-0">
+                  <span class="iconoRegistro text-left" type="text">
+                    LOGIN
+                  </span>
+                </h2>
+              </div>
+              <div
+                id="collapseTwo"
+                class="collapse show"
+                aria-labelledby="headingTwo"
+                data-parent="#accordionExample"
+              >
+                <div class="card-body">
+                  <form [formGroup]="loginForm" (ngSubmit)="loginusr()">
+                    <div class="form-group pt-2">
+                      <label for="email">Correo electrónico:</label>
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="emaillogin"
+                        formControlName="emaillogin"
+                        required
+                        [class.is-invalid]="
+                          loginForm.get('emaillogin')?.invalid &&
+                          loginForm.get('emaillogin')?.touched
+                        "
+                        [class.is-valid]="
+                          loginForm.get('emaillogin')?.valid &&
+                          loginForm.get('emaillogin')?.touched
+                        "
+                      />
+                    </div>
+                    <div>
+                      <span
+                        class="text-danger"
+                        *ngIf="
+                          isSubmitLogin && loginForm.get('emaillogin')?.invalid
+                        "
+                        >No es un email valido.</span
+                      >
+                    </div>
+                    <br />
+                    <!--<button type="submit" class="btn btn-primary btnG" [disabled]="loginForm.invalid">Entrar</button>-->
+                    <button type="submit" class="btn btn-primary btnG">
+                      Participar
+                    </button>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <br /><br />
   </div>
-  <br><br>
-</div>
 </section>
 
 <!--PREMIOS-->
@@ -236,13 +401,16 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-ms-12 rig">
-        <img src="assets/img/regalo-300.png " alt="Premio">
+        <img src="assets/img/regalo-300.png " alt="Premio" />
       </div>
       <div class="col-md-6 col-ms-12 text">
-        <h3><span class="h3">Tres ganadores de</span><br><br><span class="h3">$500.00 pesos cada
-            periodo.</span></h3>
+        <h3>
+          <span class="h3">Tres ganadores de</span><br /><br /><span class="h3"
+            >$500.00 pesos cada periodo.</span
+          >
+        </h3>
         <p>*Las imágenes son únicamente ilustrativas</p>
-        <br>
+        <br />
       </div>
     </div>
   </div>
@@ -253,15 +421,22 @@
 <!--ganadores Jaz-->
 
 <section class="ganadores-section">
-    <div class="container">
-      <h2 class="section-title">GANADORES</h2>
-      <div class="prizes-container">
-        <div class="prize-card" >
-          <h2 class="section-title">PROXIMAMENTE</h2>
+  <div class="container">
+    <h2 class="section-title">GANADORES</h2>
+    <div class="prizes-container">
+      <div
+        class="card text-dark bg-light mb-3 winners-card"
+        style="max-width: 18rem"
+      >
+        <div class="card-body">
+          <h5 class="card-title"></h5>
+
+          <h1 class="section-title2">PROXIMAMENTE</h1>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 
 <!--
 <div class="container">
@@ -275,9 +450,8 @@
     <div class="col-sm-12 centro winner">
       <h2>Próximamente</h2>-->
 
-      
-      <!--Ganadores-->
-      <!--<hr>
+<!--Ganadores-->
+<!--<hr>
       <h2>Periodo 1</h2>
       <p>Jeremy Darijean Ibañez Carballo</p>
       <p>Ramón Arturo Salguero García</p>
@@ -323,9 +497,7 @@
       <p>Angeles Paredes</p>
       <p>Michael Torres Aranda</p>-->
 
-
-
-      <!--<hr>
+<!--<hr>
             <h2>Semana 10</h2>
             <p>María Martínez</p>
             <hr>
@@ -345,90 +517,137 @@
             <p>Maria Fernanda Castillo</p>
             <hr>-->
 
-
- <!-- </div>
+<!-- </div>
   <br><br>
 </div>-->
 
-
 <!-- Modal -->
-<div class="modal fade" id="registro" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="registro"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
+      <div class="modal-header"></div>
 
       <div class="modal-body centro mb">
-        Datos registrados exitosamente<br><br>
+        Datos registrados exitosamente<br /><br />
         <i class="fa-solid fa-circle-check icon-modal"></i>
       </div>
       <div class="modal-footer">
-        <a type="button" class="btn btn-primary btnG" (click)="irParticipa()">Siguiente</a>
+        <a type="button" class="btn btn-primary btnG" (click)="irParticipa()"
+          >Siguiente</a
+        >
       </div>
     </div>
   </div>
 </div>
 <!-- Error -->
-<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="errorModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
+      <div class="modal-header"></div>
       <div class="modal-body centro mb">
-        {{errorText}}<br><br>
+        {{ errorText }}<br /><br />
         <i class="fa-solid fa-circle-check icon-modal"></i>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnG" data-bs-dismiss="modal">Aceptar</button>
+        <button
+          type="button"
+          class="btn btn-secondary btnG"
+          data-bs-dismiss="modal"
+        >
+          Aceptar
+        </button>
       </div>
     </div>
   </div>
 </div>
 
 <!-- mensajeEstados -->
-<div class="modal fade" id="EstadosModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="EstadosModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
+      <div class="modal-header"></div>
       <div class="modal-body centro mb">
-        <p>Si resultas ganador, recuerda que los premios sólo pueden redimirse en estaciones Alk. Consulta las Bases
-          para conocer las ubicaciones.</p><br><br>
-
+        <p>
+          Si resultas ganador, recuerda que los premios sólo pueden redimirse en
+          estaciones Alk. Consulta las Bases para conocer las ubicaciones.
+        </p>
+        <br /><br />
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnG" data-bs-dismiss="modal">Aceptar</button>
+        <button
+          type="button"
+          class="btn btn-secondary btnG"
+          data-bs-dismiss="modal"
+        >
+          Aceptar
+        </button>
       </div>
     </div>
   </div>
 </div>
 
 <!-- Bases -->
-<div class="modal fade" id="bases" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="bases"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
-      <div class="modal-body centro mb">
-        BASES
-      </div>
+      <div class="modal-header"></div>
+      <div class="modal-body centro mb">BASES</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnG" data-bs-dismiss="modal">De acuerdo</button>
+        <button
+          type="button"
+          class="btn btn-secondary btnG"
+          data-bs-dismiss="modal"
+        >
+          De acuerdo
+        </button>
       </div>
     </div>
   </div>
 </div>
 <!-- Aviso -->
-<div class="modal fade" id="aviso" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div
+  class="modal fade"
+  id="aviso"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-      </div>
-      <div class="modal-body centro mb">
-        Aviso
-      </div>
+      <div class="modal-header"></div>
+      <div class="modal-body centro mb">Aviso</div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary btnG" data-bs-dismiss="modal">De acuerdo</button>
+        <button
+          type="button"
+          class="btn btn-secondary btnG"
+          data-bs-dismiss="modal"
+        >
+          De acuerdo
+        </button>
       </div>
     </div>
   </div>

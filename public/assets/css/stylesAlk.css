@@ -752,6 +752,14 @@ h2 {
     font-weight: 700;
   }
 
+  .section-title2 {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #3498db;
+    font-weight: 700;
+  }
+
   .prizes-container {
     display: flex;
     justify-content: center;
