@@ -1,11 +1,47 @@
 @media (max-width: 1440px) {
-    
+    .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
   }
 @media (max-width: 1200px) {
     
+  .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
   }
   @media (max-width: 992px) {
     
+    .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
   }
 @media (max-width: 800px) {
     .logoR{
@@ -25,18 +61,110 @@
     .padd{
         padding-top: 20px;
     }
+    .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
   }
 
 
 
   @media (max-width: 650px) {
-    
-  }
+   
+    footer {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 50px;
+    }
+
+    .cont-flex {
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            img {
+                width: 120px;
+                height: auto;
+            }
+            ul {
+                width: auto;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-top: 20px; 
+                li {
+                    margin: 10px;
+                    font-size: 12px;
+                    a {
+                        color:hwb(295 4% 53%);
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            p {
+                font-size: 12px;
+                margin: 0;
+                margin-top: 30px;
+            }
+        }
+
+      .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 50vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+}
+
+  
 
    @media (max-width: 300px) {
-    
+    .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 40vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
   }
   @media (max-width: 500px) {
+    .hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
     .foto{
         width: 250px;
     }
@@ -51,6 +179,60 @@
     }
   }
  
+  footer {
+        width: 100%;
+        background-color: #f0f0f0;
+        padding: 50px;
+    }
 
-
+    .cont-flex {
+            width: 100%;
+            display: flex;
+            flex-direction: column; 
+            justify-content: space-between;
+            text-align: center;
+            align-items: center;
+            img {
+                width: 120px;
+                height: auto;
+            }
+            ul {
+                width: auto;
+                display: flex;
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                margin-top: 20px; 
+                li {
+                    margin: 10px;
+                    font-size: 12px;
+                    a {
+                        color:hwb(295 4% 53%);
+                        text-decoration: none;
+                    }
+                    a:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+            p {
+                font-size: 12px;
+                margin: 0;
+                margin-top: 30px;
+            }
+        }
 }
+
+.hero {
+  margin: 0;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  /* Fondo azul oscuro para simular agua */
+  min-height: 80vh;
+  position: relative;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
