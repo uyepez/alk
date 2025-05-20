@@ -613,8 +613,8 @@ img { z-index: 1; }
   line-height: 16px !important;
   font-size: 1em !important;
   padding: 0.75em 2em !important;
-  background-color: #00809A !important;
-  border: 1px #00809A solid !important;
+  background-color: #007b9a !important;
+  border: 1px #00769a solid !important;
   color: #fff !important;
 }
 
@@ -635,8 +635,8 @@ img { z-index: 1; }
   font-size: 1em !important;
   padding: 0.75em 2em !important;
   background-color: transparent !important;
-  border: 1px #00809A solid !important;
-  color: #00809A !important;
+  border: 1px #007b9a solid !important;
+  color: #007b9a !important;
 }
 
 .iconoRegistro {
@@ -696,7 +696,10 @@ img {
 /*PREMIOS*/
 
 .premios {
+   background: url('/assets/img/mec-bg3.png') repeat; /* Usa una imagen o CSS para gotas */
+  opacity: 1;
   background-color: #ffffff;
+  
 }
 
 .rig {
@@ -719,6 +722,17 @@ img {
   margin-bottom: 50px;
   color: #8e44ad;
   font-weight: 700;
+}
+
+img { z-index: 1; }
+@media (max-width: 768px) {
+  .mecanica-section {
+    .steps-container {
+      .step {
+        width: 100%;
+      }
+    }
+  }
 }
 
 /*GANADORES*/
@@ -756,7 +770,7 @@ h2 {
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    color: #3498db;
+    color: #0e9eb8;
     font-weight: 700;
   }
 
@@ -998,15 +1012,6 @@ footer {
 }
 
 
-
-
-
-
-
-
-
-
-
 /*LEGALES*/
 
 .legal {
@@ -1025,8 +1030,8 @@ footer {
 /*MODAL*/
 
 .mb {
-  background-color: #cecccc;
-  color: rgb(27, 27, 27);
+  background-color: hsl(283, 76%, 41%);
+  color: rgb(255, 255, 255);
 }
 
 .icon-modal {
@@ -1053,8 +1058,16 @@ footer {
   color: #9800feee;
 }
 
+.btn-sig {
+  background-color: #14a4b8cc;
+  color: white;
+  font-weight: bold;
+  border: none;
+}
+
 .input-container {
   width: 100%;
+
 }
 
 .input-container input {
@@ -1068,6 +1081,7 @@ footer {
   height: auto;
   display: flex;
   align-items: center;
+ 
 }
 
 @media only screen and (max-width: 991px) {
@@ -1094,7 +1108,7 @@ footer {
   }
 }
 
-.btn-repsol {
+.btn-jugar {
   background-color: #14a4b8cc;
   color: white;
   font-weight: bold;
@@ -1103,7 +1117,7 @@ footer {
 
 #time {
   font-size: 25px;
-  color: #fe8200;
+  color: #39068a;
   font-weight: bold;
   margin-top: 20px;
 }

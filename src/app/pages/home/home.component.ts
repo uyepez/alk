@@ -11,11 +11,14 @@ declare var window: any;
 import { environment } from '../../../environments/environment';
 import { LoginService } from '../../services/login.service';
 import { RegistroService, registroUser } from '../../services/registro.service';
+import { AvisoComponent } from '../../legales/aviso/aviso.component';
+import { BasesComponent } from '../../legales/bases/bases.component';
+
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [HeaderComponent, CommonModule, ReactiveFormsModule, RouterModule],
+  imports: [HeaderComponent, CommonModule, ReactiveFormsModule, RouterModule, AvisoComponent, BasesComponent],
   templateUrl: './home.component.html',
   styles: ``
 })
