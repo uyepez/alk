@@ -14,10 +14,10 @@ import { environment } from '../../../environments/environment';
 export class HeaderComponent {
   //Menu alk
   menuItems =[
-    {name: 'Promociones', color: 'green', route:'/promociones'},
-    {name: 'Participa', color: 'purple', route:'/participa'},
-    {name: 'Premios', color: 'purple', route:'/premios'},
-    {name: 'Ganadores', color: 'purple', route:'/ganadores'},
+    {name: 'Promociones', path:'/home', color: 'green', fragment:'hero'},
+    {name: 'Participa', path: '/home', color: 'purple', fragment:'tres'},
+    {name: 'Premios',  path: '/home', color: 'purple', fragment:'cuatro'},
+    {name: 'Ganadores',  path: '/home', color: 'purple', fragment:'cinco'},
   ];
   isMenuOpen = false;
 
