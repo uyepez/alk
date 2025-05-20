@@ -14,7 +14,7 @@ import { environment } from '../../../environments/environment';
 export class HeaderComponent {
   //Menu alk
   menuItems =[
-    {name: 'Promociones', path:'/home', color: 'green', fragment:'hero'},
+    {name: 'Promociones', path:'/home', color: 'green', fragment:'uno'},
     {name: 'Participa', path: '/home', color: 'purple', fragment:'tres'},
     {name: 'Premios',  path: '/home', color: 'purple', fragment:'cuatro'},
     {name: 'Ganadores',  path: '/home', color: 'purple', fragment:'cinco'},
