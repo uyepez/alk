@@ -1069,14 +1069,47 @@ footer {
   width: 100%;
 
 }
+  .thank-img {
+      img {
+        height: 90px;
+      }
+    }
 
 .thanks-card {
     background-color: white;
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    max-width: 800px;
+    max-width: 600px;
     margin: 0 auto;
+  }
+
+  .thank-bg {
+     background: linear-gradient(to bottom, #2b1037, #534dc2, #3eaec5);
+  }
+
+.thank-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #329ca3;
+    font-weight: 700;
+  }
+
+  .thank-parr {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 40px;
+    color: #48b0d9;
+    font-weight: 700;
+  }
+
+  .txt-parr {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 40px;
+    color: #442559;
+    font-weight: 700;
   }
 
 
