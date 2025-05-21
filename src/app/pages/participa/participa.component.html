@@ -1,6 +1,7 @@
 <app-header></app-header>
 <div class="space-height"></div>
 <!--FOTO-->
+<!--
 <div class="container">
   <div class="row">
     <div class="col-sm-12 centro">
@@ -19,8 +20,8 @@
         <p id="cronometro">
           00:00
         </p>
-      </div>
-      <form [formGroup]="registroForm" (ngSubmit)="guardaPart()">
+      </div>-->
+ <!--     <form [formGroup]="registroForm" (ngSubmit)="guardaPart()">-->
         <!-- <div class="form-group pt-2">
                     <label for="exampleFormControlFile1"></label>
                     <input type="file" class="form-control-file"  id="file" class="input-file" (change)="onFileSelected($event)"
@@ -32,7 +33,7 @@
 
                 <button type="button"  class="btn btn-primary btnG" *ngIf="pesoValido" [disabled]="loading" (click)="loadImages()">{{(loading) ? 'Cargando...' : 'SUBIR FOTO'}}</button> -->
 
-
+<!--
         <div class="input-container">
           <input class="form-control" type="text" placeholder="Diferencia Numero 1" required name="dif01"
             formControlName="dif01"
@@ -57,7 +58,7 @@
             Este campo es requerido.
           </span>
           <input type="hidden" formControlName="dif04" name="dif04">
-          <input type="hidden" formControlName="dif05" name="dif05">
+          <input type="hidden" formControlName="dif05" name="dif05">-->
           <!--<input class="form-control" type="text" placeholder="Diferencia Numero 4" required name="dif04" formControlName="dif04"
                         [class.is-invalid]="registroForm.get('dif04')?.invalid && registroForm.get('dif04')?.touched "
                         [class.is-valid]="registroForm.get('dif04')?.valid && registroForm.get('dif04')?.touched">
@@ -71,7 +72,7 @@
                         Este campo es requerido.
                     </span>-->
 
-          <input type="submit" class="btn-jugar" value="Jugar">
+ <!--         <input type="submit" class="btn-jugar" value="Jugar">
         </div>
 
       </form>
@@ -79,4 +80,35 @@
     </div>
   </div>
   <br><br>
-</div>
+</div>-->
+
+<section class=" game-section">
+  <div></div>
+  <div class="container">
+    <h2 class="game-title">Memorama</h2>
+    <h3 class="game-title2">Instrucciones del juego</h3>
+
+    <div class="steps-container">
+      <div class="step" *ngFor="let step of step1">
+        <div class="step-circle" [ngClass]="step.color">
+          <span>{{ step.letter }}</span>
+        </div>
+        <div class="step-image">
+          <img [src]="step.image" [alt]="'Paso ' + step.letter" />
+        </div>
+        <p class="step-text" [ngClass]="step.color">{{ step.text }}</p>
+      </div>
+    </div>
+    <div class="steps-container">
+      <div class="step" *ngFor="let step of step2">
+        <div class="step-circle" [ngClass]="step.color">
+          <span>{{ step.letter }}</span>
+        </div>
+        <div class="step-image">
+          <img [src]="" [alt]="'Paso ' + step.letter" />
+        </div>
+        <p class="step-text" [ngClass]="step.color">{{ step.text }}</p>
+      </div>
+    </div>
+  </div>
+</section>
