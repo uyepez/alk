@@ -600,14 +600,14 @@ img { z-index: 1; }
 .btnG {
   display: inline-block !important;
   margin-bottom: 0;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   text-align: center !important;
   vertical-align: middle !important;
   touch-action: manipulation;
   cursor: pointer !important;
   background-image: none;
   white-space: nowrap;
-  border-radius: 4px !important;
+  border-radius: 40px !important;
   user-select: none !important;
   transition: all .15s ease !important;
   line-height: 16px !important;
@@ -621,14 +621,14 @@ img { z-index: 1; }
 .btnG:hover {
   display: inline-block;
   margin-bottom: 0;
-  font-weight: 400 !important;
+  font-weight: 600 !important;
   text-align: center !important;
   vertical-align: middle !important;
   touch-action: manipulation;
   cursor: pointer !important;
   background-image: none;
   white-space: nowrap;
-  border-radius: 4px !important;
+  border-radius: 40px !important;
   user-select: none;
   transition: all .15s ease !important;
   line-height: 16px !important;
@@ -1125,7 +1125,47 @@ footer {
         }
       }
 
-      
+      .btn-game {
+  display: inline-block !important;
+  margin-bottom: 0;
+  font-weight: 700 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  touch-action: manipulation;
+  cursor: pointer !important;
+  background-image: none;
+  white-space: nowrap;
+  border-radius: 70px !important;
+  user-select: none !important;
+  transition: all .15s ease !important;
+  line-height: 16px !important;
+  font-size: 1em !important;
+  padding: 0.75em 2em !important;
+  background-color: #0e7e1d !important;
+  border: 1px #009a33 solid !important;
+  color: #fff !important;
+}
+
+.btn-game:hover {
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 700 !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  touch-action: manipulation;
+  cursor: pointer !important;
+  background-image: none;
+  white-space: nowrap;
+  border-radius: 70px !important;
+  user-select: none;
+  transition: all .15s ease !important;
+  line-height: 16px !important;
+  font-size: 1em !important;
+  padding: 0.75em 2em !important;
+  background-color: transparent !important;
+  border: 1px #0d9a00 solid !important;
+  color: #009a21 !important;
+}
       
       .step-image {
         margin-bottom: 15px;
@@ -1172,7 +1212,7 @@ footer {
 }
 
 .card-img {
- margin: 15px;
+ padding-left: 25px;
         img {
           max-width:150px;
           height: auto;
@@ -1199,6 +1239,9 @@ img { z-index: 1; }
     }
   }
 }
+
+
+
 
 
 
