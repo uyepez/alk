@@ -1156,6 +1156,29 @@ footer {
   }
 }
 
+
+.container-g { 
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+
+
+}
+
+.cont-flex{
+  justify-content: space-around;
+}
+
+.card-img {
+ margin: 15px;
+        img {
+          max-width:150px;
+          height: auto;
+        }
+}
+
 .game-section::after {
   content: '';
   position: absolute;

@@ -26,7 +26,7 @@ step1 = [
       letter: '1',
       color: 'purple',
       text: 'Da clic en las cartas para busar los pares.',
-      image: '/assets/img/registro-datos.png'
+      image: '/assets/img/game-cards1.png'
     }
   ];
 
@@ -35,17 +35,13 @@ step2 = [
       letter: '2',
       color: 'blue',
       text: 'Cada par que encuentres permanecerá visible, los que sean pares se voltearán.'
-      
     },
     {
       letter: '3',
       color: 'light-blue',
       text: 'Repite la acción hasta encontrar los 5 pares. '
-     
     }
   ];
-
-
 
 
   // Formulario
