@@ -156,9 +156,7 @@
                           class="text-danger"
                           *ngIf="
                             isSubmitReg &&
-                            registroForm.get('telefonoregistro')?.invalid
-                          "
-                        >
+                            registroForm.get('telefonoregistro')?.invalid">
                           Este campo es requerido y permíte hasta 10 dígitos.
                         </span>
                       </div>
@@ -254,16 +252,13 @@
                           class="text-danger"
                           *ngIf="
                             isSubmitReg &&
-                            registroForm.get('estadoregistro')?.invalid
-                          "
-                        >
+                            registroForm.get('estadoregistro')?.invalid">
                           Este campo es requerido.
                         </span>
                       </div>
                       <div class="col-md-12">
                         <div
-                          class="d-flex justify-content-end align-items-center"
-                        >
+                          class="d-flex justify-content-end align-items-center">
                           <div class="form-group pt-2 form-check">
                             <input
                               type="checkbox"
@@ -277,12 +272,10 @@
                               formControlName="terminos"
                               [class.is-invalid]="
                                 registroForm.get('terminos')?.invalid &&
-                                registroForm.get('terminos')?.touched
-                              "
+                                registroForm.get('terminos')?.touched"
                               [class.is-valid]="
                                 registroForm.get('terminos')?.valid &&
-                                registroForm.get('terminos')?.touched
-                              "
+                                registroForm.get('terminos')?.touched"
                             />
                             <label class="form-check-label" for="exampleCheck1"
                               >Acepto
@@ -426,13 +419,9 @@
   <div class="container">
     <h2 class="section-title">GANADORES</h2>
     <div class="prizes-container">
-      <div
-        class="card text-dark bg-light mb-3 winners-card"
-        style="max-width: 18rem"
-      >
+      <div class="card text-dark bg-light mb-3 winners-card">
         <div class="card-body">
           <h5 class="card-title"></h5>
-
           <h1 class="section-title2">PROXIMAMENTE</h1>
         </div>
       </div>
@@ -612,8 +601,7 @@
   id="bases"
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header"></div>
@@ -623,8 +611,7 @@
         <button
           type="button"
           class="btn btn-secondary btnG"
-          data-bs-dismiss="modal"
-        >
+          data-bs-dismiss="modal">
           De acuerdo
         </button>
       </div>
@@ -637,8 +624,7 @@
   id="aviso"
   tabindex="-1"
   aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
+  aria-hidden="true">
   <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header"></div>
@@ -648,8 +634,7 @@
         <button
           type="button"
           class="btn btn-secondary btnG"
-          data-bs-dismiss="modal"
-        >
+          data-bs-dismiss="modal">
           De acuerdo
         </button>
       </div>
