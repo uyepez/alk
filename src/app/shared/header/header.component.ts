@@ -3,7 +3,6 @@ import { Component } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { environment } from '../../../environments/environment';
 
-
 @Component({
   selector: 'app-header',
   standalone: true,
@@ -26,7 +25,6 @@ export class HeaderComponent {
   }
 
   miToken: string =  "";
-
 
   constructor(private router: Router) {}
 
