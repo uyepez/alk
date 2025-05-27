@@ -440,9 +440,8 @@ overflow: hidden;
   background: rgba(255,255,255, 0.931), 0 0 10px rgba (255, 255,255, 0.995);
   animation:float linear infinite;
   pointer-events: none;
-}
 
-@keyframes float {
+  @keyframes float {
   0% {
     transform: translateY(0) translate(0);
     opacity: 0.8;
@@ -455,6 +454,9 @@ overflow: hidden;
     opacity: 0;
   }
 }
+
+}
+
 
 
 /*MECANICA*/
