@@ -319,6 +319,41 @@ body {
   align-items: center;
 }
 
+/*bubbles*/
+.bubble-container{
+position: relative;
+width: 100%;
+height: 100%;
+overflow: hidden;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 30px;
+  height: 30px;
+  background: rgba(255,255,255, 0.931), 0 0 10px rgba (255, 255,255, 0.995);
+  /*animation: float 6s ease-in-out infinite;*/
+  animation:float 8s linear infinite;
+  pointer-events: none;
+ 
+}
+ 
+ @keyframes float {
+  0% {
+    transform: translateY(0) translate(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity:0.6;
+  }
+  100%{
+    transform: translateY(-100vh) translateX(calc(var(--sway)* 1px));
+    opacity: 0;
+  }
+}
+
+
 .hero-sec-bg {
  background-image: url('/public/assets/img/hero-bg-v4.png'); /* Reemplaza con tu ruta */
   background-size: cover;
@@ -422,39 +457,7 @@ img {
   z-index: 1;
 }
 
-/*bubbles*/
-.bubble-container{
-position: relative;
-width: 100%;
-height: 100%;
-overflow: hidden;
-}
 
-.bubble {
-  position: absolute;
-  bottom: -50px;
-  width: 30px;
-  height: 30px;
-  background: rgba(255,255,255, 0.931), 0 0 10px rgba (255, 255,255, 0.995);
-  animation: float 6s ease-in-out infinite;
-  animation:float linear infinite;
-  pointer-events: none;
-
-  @keyframes float {
-  0% {
-    transform: translateY(0) translate(0);
-    opacity: 0.8;
-  }
-  50% {
-    opacity:0.6;
-  }
-  100%{
-    transform: translateY(-100vh) translateX(calc(var(--sway)* 1px));
-    opacity: 0;
-  }
-}
-}
- 
 
 
 
