@@ -157,8 +157,6 @@ body {
                 opacity: 0.8;
               }
 
-
-
               /* Otros estilos de los enlaces */
             }
           }
@@ -438,6 +436,7 @@ overflow: hidden;
   width: 30px;
   height: 30px;
   background: rgba(255,255,255, 0.931), 0 0 10px rgba (255, 255,255, 0.995);
+  animation: float 6s ease-in-out infinite;
   animation:float linear infinite;
   pointer-events: none;
 
@@ -563,6 +562,7 @@ h1 {
         img {
           max-width:280px;
           height: auto;
+          animation: float 6s ease-in-out infinite;
         }
       }
       
