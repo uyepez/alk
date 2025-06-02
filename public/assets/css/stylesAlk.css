@@ -325,6 +325,7 @@ position: relative;
 width: 100%;
 height: 100%;
 overflow: hidden;
+z-index: 1;
 }
 
 .bubble {
@@ -336,7 +337,7 @@ overflow: hidden;
   /*animation: float 6s ease-in-out infinite;*/
   animation:float 8s linear infinite;
   pointer-events: none;
- 
+ z-index: 2;
 }
  
  @keyframes float {
