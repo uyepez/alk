@@ -157,8 +157,6 @@ body {
                 opacity: 0.8;
               }
 
-
-
               /* Otros estilos de los enlaces */
             }
           }
@@ -321,6 +319,42 @@ body {
   align-items: center;
 }
 
+/*bubbles*/
+.bubble-container{
+position: relative;
+width: 100%;
+height: 100%;
+overflow: hidden;
+z-index: 1;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -50px;
+  width: 30px;
+  height: 30px;
+  background: rgba(255,255,255, 0.931), 0 0 10px rgba (255, 255,255, 0.995);
+  /*animation: float 6s ease-in-out infinite;*/
+  animation:float 8s linear infinite;
+  pointer-events: none;
+ z-index: 2;
+}
+ 
+ @keyframes float {
+  0% {
+    transform: translateY(0) translate(0);
+    opacity: 0.8;
+  }
+  50% {
+    opacity:0.6;
+  }
+  100%{
+    transform: translateY(-100vh) translateX(calc(var(--sway)* 1px));
+    opacity: 0;
+  }
+}
+
+
 .hero-sec-bg {
  background-image: url('/public/assets/img/hero-bg-v4.png'); /* Reemplaza con tu ruta */
   background-size: cover;
@@ -372,6 +406,8 @@ body {
   }
 }
 
+
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -421,6 +457,8 @@ height: 100%;
 img {
   z-index: 1;
 }
+
+
 
 
 
@@ -528,6 +566,7 @@ h1 {
         img {
           max-width:280px;
           height: auto;
+          animation: float 6s ease-in-out infinite;
         }
       }
       
@@ -1267,7 +1306,8 @@ img { z-index: 1; }
     border-radius: 15px;
     padding: 30px;
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    max-width: 320px;
+    max-height: auto;
     margin: 0 auto;
   }
 
