@@ -63,18 +63,9 @@ step2 = [
   isSubmitReg: Boolean = false;
   miUsuario: registroUser = <registroUser>{};
 
-  // modal
-  formModal: any;
-  formError: any;
-  estadosModal: any;
-  errorText: string = '';
 
-  // estados
-  arrayEstados = [
-    'Baja California', 'Campeche', 'Coahuila de Zaragoza', 'Colima',
-    'Chihuahua', 'Durango', 'Guerrero', 'México', 'Nayarit',
-    'Nuevo León', 'Quintana Roo', 'Sinaloa', 'Tamaulipas', 'Yucatán'
-  ];
+
+
 
   constructor(
     private router: Router,
@@ -115,14 +106,12 @@ step2 = [
   }
 
   ngOnInit(): void {
-    this.formModal = new window.bootstrap.Modal(document.getElementById('registro'));
-    this.formError = new window.bootstrap.Modal(document.getElementById('errorModal'));
-    this.estadosModal = new window.bootstrap.Modal(document.getElementById('EstadosModal'));
+
 
   }
 
   loginusr(): void {
-this.formModal.show();
+
     this.isSubmitLogin = true;
     if (this.loginForm.valid) {
       Swal.fire({
@@ -136,12 +125,31 @@ this.formModal.show();
       this.logServ.login(this.loginForm.value['emaillogin']).subscribe((resp: any) => {
         this.respuestaLogin = resp;
         Swal.close();
-        if (this.respuestaLogin.success === '200') {
+        if (this.respuestaLogin.success === 200) {
           localStorage.setItem(environment.tokenVar, this.respuestaLogin.token);
-          this.formModal.show();
+          Swal.fire({
+            allowOutsideClick: false,
+            title: 'Bienvenido',
+            icon: 'success',
+            text: `Login correcto`,
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#0d6efd'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.router.navigateByUrl('/participa');
+            }
+          });
+
         } else {
-          this.errorText = this.respuestaLogin.error_msg;
-          this.formError.show();
+
+          Swal.fire({
+            title: 'Error',
+            icon: 'error',
+            text: this.respuestaLogin.error_msg,
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#0d6efd'
+          });
+
         }
       });
     }
@@ -162,27 +170,40 @@ this.formModal.show();
       this.regServ.registro(this.miUsuario).subscribe((resp: any) => {
         this.respuestaRegistro = resp;
         Swal.close();
-        if (this.respuestaRegistro.success === '200') {
+        if (this.respuestaRegistro.success === 200) {
           localStorage.setItem(environment.tokenVar, this.respuestaRegistro.token);
-          this.formModal.show();
+
+          Swal.fire({
+            allowOutsideClick: false,
+            title: 'Bienvenido',
+            icon: 'success',
+            text: `Registro correcto`,
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#0d6efd'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              this.router.navigateByUrl('/participa');
+            }
+          });
+
         } else {
-          this.errorText = this.respuestaRegistro.error_msg;
-          this.formError.show();
+
+          Swal.fire({
+            title: 'Error',
+            icon: 'error',
+            text: this.respuestaRegistro.error_msg,
+            confirmButtonText: 'Aceptar',
+            confirmButtonColor: '#0d6efd'
+          });
+
         }
       });
     }
   }
 
-  irParticipa(): void {
-    this.formModal.hide();
-    this.router.navigateByUrl('/participa');
-  }
 
-  validaEstado(): void {
-    if (this.arrayEstados.includes(this.registroForm.value['estadoregistro'])) {
-      this.estadosModal.show();
-    }
-  }
+
+
 
 
 }

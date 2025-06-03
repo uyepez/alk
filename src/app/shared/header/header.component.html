@@ -18,13 +18,18 @@
       <nav class="main-menu" [ngClass]="{ open: isMenuOpen }">
         <ul>
           <li *ngFor="let item of menuItems">
+
             <a [routerLink]="item.path" [fragment]="item.fragment" [ngClass]="item.color">{{
               item.name
             }}</a>
-            <a *ngIf="miToken !='' " class="nav-link text-blue" [routerLink]="['/participa']"
-                  data-ancla="cinco">PARTICIPA</a>
-            <a *ngIf="miToken !='' " class="nav-link text-blue" href="javaScript:void(0)" (click)="salir()"
-                  data-ancla="cinco">SALIR</a>
+          </li>
+          <li>
+            <a *ngIf="miToken !='' " class="purple" [routerLink]="['/participa']"
+                  data-ancla="cinco">Participa</a>
+          </li>
+          <li>
+            <a *ngIf="miToken !='' " class="purple" href="javaScript:void(0)" (click)="salir()"
+                  data-ancla="cinco">Salir</a>
           </li>
         </ul>
       </nav>

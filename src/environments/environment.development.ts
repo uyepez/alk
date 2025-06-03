@@ -1,5 +1,5 @@
 export const environment = {
    production: true,
-  apiUrl: 'https://innovacionquepremia.mx/restRepsol24',
-  tokenVar: 'tokenRepsol24pro'
+  apiUrl: 'http://localhost/promos2025/bayer/alka-defense/restAlkeDefense',
+  tokenVar: 'tokenAlka-Defense-25'
 };

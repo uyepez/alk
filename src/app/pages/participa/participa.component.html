@@ -1,86 +1,6 @@
 <app-header></app-header>
 <div class="space-height"></div>
-<!--FOTO-->
-<!--
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 centro">
-      <h1>Memorama</h1>
-      <br>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-md-8 col-ms-12 rig cont-flex">
-      <img class="foto" src="assets/img/diferencias.png" alt="Img" width="100%">
-    </div>
-    <div class="col-md-4 col-ms-12 text2">
-      <h3>Encuentra las <span class="naranja">3 diferencias </span>en la imagen.</h3>
 
-      <div id="time">
-        <p id="cronometro">
-          00:00
-        </p>
-      </div>-->
- <!--     <form [formGroup]="registroForm" (ngSubmit)="guardaPart()">-->
-        <!-- <div class="form-group pt-2">
-                    <label for="exampleFormControlFile1"></label>
-                    <input type="file" class="form-control-file"  id="file" class="input-file" (change)="onFileSelected($event)"
-                        accept="image/x-png,image/gif,image/jpeg">
-                </div><br>
-                <div>
-                    <p class="text-danger">{{ estatusSubida }}</p>
-                </div>
-
-                <button type="button"  class="btn btn-primary btnG" *ngIf="pesoValido" [disabled]="loading" (click)="loadImages()">{{(loading) ? 'Cargando...' : 'SUBIR FOTO'}}</button> -->
-
-<!--
-        <div class="input-container">
-          <input class="form-control" type="text" placeholder="Diferencia Numero 1" required name="dif01"
-            formControlName="dif01"
-            [class.is-invalid]="registroForm.get('dif01')?.invalid && registroForm.get('dif01')?.touched "
-            [class.is-valid]="registroForm.get('dif01')?.valid && registroForm.get('dif01')?.touched">
-          <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('dif01')?.invalid ">
-            Este campo es requerido.
-          </span>
-
-          <input class="form-control" type="text" placeholder="Diferencia Numero 2" required name="dif02"
-            formControlName="dif02"
-            [class.is-invalid]="registroForm.get('dif02')?.invalid && registroForm.get('dif02')?.touched "
-            [class.is-valid]="registroForm.get('dif02')?.valid && registroForm.get('dif02')?.touched">
-          <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('dif02')?.invalid ">
-            Este campo es requerido.
-          </span>
-          <input class="form-control" type="text" placeholder="Diferencia Numero 3" required name="dif03"
-            formControlName="dif03"
-            [class.is-invalid]="registroForm.get('dif03')?.invalid && registroForm.get('dif03')?.touched "
-            [class.is-valid]="registroForm.get('dif03')?.valid && registroForm.get('dif03')?.touched">
-          <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('dif03')?.invalid ">
-            Este campo es requerido.
-          </span>
-          <input type="hidden" formControlName="dif04" name="dif04">
-          <input type="hidden" formControlName="dif05" name="dif05">-->
-          <!--<input class="form-control" type="text" placeholder="Diferencia Numero 4" required name="dif04" formControlName="dif04"
-                        [class.is-invalid]="registroForm.get('dif04')?.invalid && registroForm.get('dif04')?.touched "
-                        [class.is-valid]="registroForm.get('dif04')?.valid && registroForm.get('dif04')?.touched">
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('dif04')?.invalid ">
-                        Este campo es requerido.
-                    </span>
-                    <input class="form-control" type="text" placeholder="Diferencia Numero 5" required name="dif05" formControlName="dif05"
-                        [class.is-invalid]="registroForm.get('dif05')?.invalid && registroForm.get('dif05')?.touched "
-                        [class.is-valid]="registroForm.get('dif05')?.valid && registroForm.get('dif05')?.touched">
-                    <span class="text-danger" *ngIf="isSubmitReg && registroForm.get('dif05')?.invalid ">
-                        Este campo es requerido.
-                    </span>-->
-
- <!--         <input type="submit" class="btn-jugar" value="Jugar">
-        </div>
-
-      </form>
-
-    </div>
-  </div>
-  <br><br>
-</div>-->
 
 <section class=" game-section">
   <div></div>
@@ -123,7 +43,7 @@
     <br>
 
     <div class="col-sm-12 centro btn-group-lg ">
-            <button type="button" class="btn-game btn  btn-success " data-bs-dismiss="modal">    JUGAR   </button>
+            <a href="/juego" class="btn-game btn  btn-success ">    JUGAR   </a>
           </div>
   </div>
 </section>

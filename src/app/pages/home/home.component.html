@@ -203,7 +203,6 @@
                             registroForm.get('estadoregistro')?.valid &&
                             registroForm.get('estadoregistro')?.touched
                           "
-                          (change)="validaEstado()"
                         >
                           <option value="">Selecciona una opción</option>
                           <option value="Aguascalientes">Aguascalientes</option>
@@ -369,7 +368,7 @@
                     </div>
                     <br />
                     <!--<button type="submit" class="btn btn-primary btnG" [disabled]="loginForm.invalid">Entrar</button>-->
-                    <button type="submit" class="btn btn-primary btnG">
+                    <button type="submit" class="btn btn-primary btnG" [disabled]="loginForm.invalid">
                       Participar
                     </button>
                   </form>
@@ -513,88 +512,6 @@
   <br><br>
 </div>-->
 
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="registro"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header"></div>
-
-      <div class="modal-body centro mb">
-        Datos registrados exitosamente<br /><br />
-        <i class="fa-solid fa-circle-check icon-modal"></i>
-      </div>
-      <div class="modal-footer">
-        <a type="button" class="btn btn-primary btnG" (click)="irParticipa()"
-          >Siguiente</a
-        >
-      </div>
-    </div>
-  </div>
-</div>
-<!-- Error -->
-<div
-  class="modal fade"
-  id="errorModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header"></div>
-      <div class="modal-body centro mb">
-        {{ errorText }}<br /><br />
-        <i class="fa-solid fa-circle-check icon-modal"></i>
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary btnG"
-          data-bs-dismiss="modal"
-        >
-          Aceptar
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- mensajeEstados -->
-<div
-  class="modal fade"
-  id="EstadosModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header"></div>
-      <div class="modal-body centro mb">
-        <p>
-          Si resultas ganador, recuerda que los premios sólo pueden redimirse en
-          estaciones Alk. Consulta las Bases para conocer las ubicaciones.
-        </p>
-        <br /><br />
-      </div>
-      <div class="modal-footer">
-        <button
-          type="button"
-          class="btn btn-secondary btnG"
-          data-bs-dismiss="modal"
-        >
-          Aceptar
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Bases -->
 <div
