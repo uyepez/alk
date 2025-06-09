@@ -32,7 +32,7 @@ step1 = [
     {
       letter: 'A',
       color: 'blue',
-      image: '/assets/img/registro-datos.png',
+      image: 'assets/img/registro-datos.png',
       text: 'Registra tus datos.'
     }
   ];
@@ -41,13 +41,13 @@ step2 = [
     {
       letter: 'B',
       color: 'purple',
-      image: '/assets/img/mec-juega.png',
+      image: 'assets/img/mec-juega.png',
       text: 'Juega, encuentra todos los pares del memorama.'
     },
     {
       letter: 'C',
       color: 'light-blue',
-      image: '/assets/img/mec-participa.png',
+      image: 'assets/img/mec-participa.png',
       text: 'Participa obten una bocina inteligente.'
     }
   ];

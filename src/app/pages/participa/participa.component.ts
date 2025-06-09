@@ -25,7 +25,7 @@ step1 = [
       letter: '1',
       color: 'purple',
       text: 'Da clic en las cartas para busar los pares.',
-      image: '/assets/img/game-cards1.png'
+      image: 'assets/img/game-cards1.png'
     }
   ];
 

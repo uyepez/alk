@@ -1,5 +1,5 @@
 export const environment = {
    production: true,
-  apiUrl: 'http://localhost/promos2025/bayer/alka-defense/restAlkeDefense',
+  apiUrl: 'https://solobienestar.com/2025/restBayer2025/restAlkaDefense2025',
   tokenVar: 'tokenAlka-Defense-25'
 };
